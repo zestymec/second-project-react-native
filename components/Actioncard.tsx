@@ -19,7 +19,7 @@ export default function Actioncard() {
 
                 {/* Image Section */}
                 <Image
-                    source={{ uri: 'https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }}
+                    source={}
                     style={styles.cardimage}
                 />
 
