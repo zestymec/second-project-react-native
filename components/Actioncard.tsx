@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, Linking, Image, TouchableOpacity } from 'react-
 import React from 'react'
 
 export default function Actioncard() {
-    // Website open karne ka function
+ 
     function openwebsite(Websitelink) {
         Linking.openURL(Websitelink)
     }
@@ -12,18 +12,17 @@ export default function Actioncard() {
             <Text style={styles.headingtext}>Blog Card</Text>
             
             <View style={styles.card}>
-                {/* Header Section */}
+            
                 <View style={styles.headerContainer}>
                     <Text style={styles.cardheading}>What's New in JavaScript -- ES6</Text>
                 </View>
 
-                {/* Image Section */}
                 <Image
-                    source={}
+                    source={{ uri: 'https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }}
                     style={styles.cardimage}
                 />
 
-                {/* Card Body / Description */}
+             
                 <View style={styles.cardbody}>
                     <Text style={styles.bodyText} numberOfLines={3}>
                         ES6 (ECMAScript 2015) brought major updates like Arrow functions, 
@@ -32,7 +31,6 @@ export default function Actioncard() {
                     </Text>
                 </View>
 
-                {/* Footer Section with Button */}
                 <View style={styles.footerContainer}>
                     <TouchableOpacity 
                         style={styles.button}
@@ -60,10 +58,9 @@ const styles = StyleSheet.create({
     card: {
         backgroundColor: '#FFFFFF',
         borderRadius: 10,
-        margin: 8,
-        // Elevation for Android
+    
         elevation: 4,
-        // Shadow for iOS
+
         shadowOffset: { width: 1, height: 1 },
         shadowColor: '#333',
         shadowOpacity: 0.3,
@@ -80,7 +77,7 @@ const styles = StyleSheet.create({
         fontWeight: '600',
     },
     cardimage: {
-        height: 180, // Height lazmi deni hai remote image ke liye
+        height: 180, 
         width: '100%',
     },
     cardbody: {
