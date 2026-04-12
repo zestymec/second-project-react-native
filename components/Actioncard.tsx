@@ -3,14 +3,14 @@ import React from 'react'
 
 export default function Actioncard() {
 
-    const openWebsite = async (websiteLink: string) => {
-        const supported = await Linking.canOpenURL(websiteLink);
-        if (supported) {
-            await Linking.openURL(websiteLink);
-        } else {
-            console.log("Error opening URL: " + websiteLink);
-        }
+   const openWebsite = async (websiteLink: string) => {
+    try {
+        await Linking.openURL(websiteLink);
+    } catch (error) {
+        console.log("Link nahi khul raha: ", error);
+        
     }
+};
 
     return (
         <ScrollView style={styles.container}>
@@ -38,7 +38,7 @@ export default function Actioncard() {
                     <TouchableOpacity 
                         activeOpacity={0.8}
                         style={styles.button}
-                        onPress={() => openWebsite('https://www.learnvern.com/javascript-tutorials/introduction-to-javascript')}
+                        onPress={() => openWebsite('https://www.youtube.com/watch?v=QpTPQmBsOyI')}
                     >
                         <Text style={styles.buttonText}>Read More</Text>
                     </TouchableOpacity>
